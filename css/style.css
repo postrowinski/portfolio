@@ -1,0 +1,169 @@
+/* FONTS */
+@import url(https://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+/* VARIABLES */
+/* MIXIN */
+/* MEDIA QUERY*/
+/* ANIMATION */
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    top: 120%; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+
+/* GENERAL */
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  height: 35px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  -o-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease; }
+  .button_container:hover {
+    opacity: 0.65; }
+  .button_container.active .top {
+    transform-origin: 22%;
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: rotate(405deg);
+    background: #fff; }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #fff; }
+  .button_container.active .bottom {
+    transform-origin: 22%;
+    -webkit-transform: rotate(-405deg);
+    -moz-transform: rotate(-405deg);
+    -o-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+    background: #fff; }
+  .button_container span {
+    background: #6186ff;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    cursor: pointer; }
+    .button_container span:nth-of-type(2) {
+      top: 10px; }
+    .button_container span:nth-of-type(3) {
+      top: 20px; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  -webkit-transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  -moz-transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  -o-transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  z-index: 50; }
+  .overlay:before {
+    content: '';
+    background: #6186ff;
+    left: -55%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: left 0.45s ease;
+    -moz-transition: left 0.45s ease;
+    -o-transition: left 0.45s ease;
+    transition: left 0.45s ease; }
+  .overlay:after {
+    content: '';
+    background: #6186ff;
+    right: -55%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: right .45s ease;
+    -moz-transition: right .45s ease;
+    -o-transition: right .45s ease;
+    transition: right .45s ease; }
+  .overlay.open {
+    opacity: 0.7;
+    visibility: visible;
+    height: 100%; }
+    .overlay.open:before {
+      left: 0; }
+    .overlay.open:after {
+      right: 0; }
+    .overlay.open li {
+      animation: fadeInBottom 0.6s ease forwards;
+      animation-delay: 0.45s; }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: 0.55s; }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: 0.65s; }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: 0.75s; }
+  .overlay nav {
+    position: relative;
+    height: 60%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    z-index: 100; }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%; }
+    .overlay ul li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0; }
+      .overlay ul li a {
+        display: block;
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        overflow: hidden; }
+        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+          width: 200%; }
+        .overlay ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          transform: translateX(-50%);
+          height: 3px;
+          background: #fff;
+          -webkit-transition: 0.35s;
+          -moz-transition: 0.35s;
+          -o-transition: 0.35s;
+          transition: 0.35s; }
+
+/*# sourceMappingURL=style.css.map */
