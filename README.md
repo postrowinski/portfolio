@@ -1,2 +1,2 @@
-# Creative
-https://postrowinski.github.io/Creative_Project/
+
+Project link: https://postrowinski.github.io/portfolio
