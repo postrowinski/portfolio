@@ -300,7 +300,8 @@ body {
     text-shadow: #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px; }
 
 .skills {
-  background: rgba(232, 117, 12, 0.65); }
+  background: rgba(232, 117, 12, 0.65);
+  padding-bottom: 30px; }
   .skills .section-header:before {
     content: "U"; }
   .skills .section-header.second:before {
@@ -317,5 +318,20 @@ body {
     @media (max-width: 475px) {
       .skills .skills-icon {
         margin: 10px 15px; } }
+  .skills .future-skills-icon {
+    height: 100px;
+    margin: 0;
+    padding: 0; }
+  .skills .test {
+    line-height: 100px; }
+  .skills .operators {
+    font-weight: 700;
+    margin-left: -3px;
+    font-size: 70px;
+    line-height: 100px;
+    position: relative;
+    top: 22px; }
+    .skills .operators.or {
+      margin: 0 5px; }
 
 /*# sourceMappingURL=style.css.map */

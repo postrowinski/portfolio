@@ -4,4 +4,5 @@ $(document).ready(function () {
         $('#overlay').toggleClass('open');
     });
     $('.skills-icon').attr('data-toggle', 'tooltip').attr('data-placement', 'bottom');
+     $('[data-toggle="tooltip"]').tooltip();
 });
