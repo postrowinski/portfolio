@@ -16,6 +16,22 @@
     opacity: 1;
     top: 0; } }
 
+@keyframes shakeIconsIn {
+  25% {
+    transform: rotate(140deg); }
+  50% {
+    transform: rotate(-100deg); }
+  75% {
+    transform: rotate(60deg); } }
+
+@keyframes shakeIconsOut {
+  25% {
+    transform: rotate(140deg); }
+  50% {
+    transform: rotate(-100deg); }
+  75% {
+    transform: rotate(60deg); } }
+
 /* GENERAL */
 body {
   font-family: 'Lato', sans-serif; }
@@ -43,6 +59,16 @@ body {
     font-size: 162px;
     opacity: 0.3;
     text-shadow: none; }
+    @media (max-width: 475px) {
+      .section-header:before {
+        font-size: 124px; } }
+  @media (max-width: 475px) {
+    .section-header {
+      font-size: 32px;
+      margin: 50px 0; } }
+
+a:hover {
+  color: transparent; }
 
 /* NAV */
 .button_container {
@@ -234,6 +260,13 @@ body {
 /* PROJECTS */
 .projects {
   background: rgba(97, 134, 255, 0.8); }
+  @media (max-width: 475px) {
+    .projects {
+      overflow: hidden; } }
+  @media (max-width: 475px) {
+    .projects .container {
+      padding-left: 0;
+      padding-right: 0; } }
   .projects .section-header:before {
     content: "P"; }
   .projects [class*="col"] {
@@ -286,9 +319,20 @@ body {
     .projects .btn:hover {
       background-position: 0 100%;
       color: #6186ff; }
+    @media (max-width: 475px) {
+      .projects .btn {
+        line-height: 25px;
+        font-size: 16px;
+        padding: 0 15px;
+        margin: 8px auto; } }
   .projects h3 {
     line-height: 40px;
     text-shadow: 2px 2px 0 #000; }
+    @media (max-width: 475px) {
+      .projects h3 {
+        line-height: 30px;
+        font-size: 20px;
+        margin: 10px auto; } }
   .projects p {
     text-transform: uppercase;
     color: #fff;
@@ -298,6 +342,11 @@ body {
     font-size: 18px;
     /* Border for text */
     text-shadow: #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px,  #000 0px 0px 2px; }
+    @media (max-width: 475px) {
+      .projects p {
+        font-weight: 400;
+        line-height: 22px;
+        font-size: 15px; } }
 
 .skills {
   background: rgba(232, 117, 12, 0.65);
@@ -318,15 +367,87 @@ body {
     @media (max-width: 475px) {
       .skills .skills-icon {
         margin: 10px 15px; } }
+  @media (max-width: 475px) {
+    .skills .future-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; } }
   .skills .future-skills .future-skills-icon {
     height: 80px; }
+    @media (max-width: 991px) {
+      .skills .future-skills .future-skills-icon {
+        height: 60px; } }
+    @media (max-width: 768px) {
+      .skills .future-skills .future-skills-icon {
+        height: 40px; } }
+    @media (max-width: 475px) {
+      .skills .future-skills .future-skills-icon {
+        height: 100px;
+        margin: 10px 15px; } }
+    @media (max-width: 475px) {
+      .skills .future-skills .future-skills-icon.hide-icons {
+        display: none; } }
   .skills .future-skills .operators {
     font-weight: 700;
     font-size: 60px;
     margin-left: -6px;
-    line-height: 100px;
+    line-height: 80px;
     position: relative;
     top: 18px;
     left: 3px; }
+    @media (max-width: 991px) {
+      .skills .future-skills .operators {
+        font-size: 40px;
+        line-height: 60px;
+        top: 11px; } }
+    @media (max-width: 768px) {
+      .skills .future-skills .operators {
+        font-size: 25px;
+        font-weight: 400;
+        top: 6px; } }
+    @media (max-width: 475px) {
+      .skills .future-skills .operators {
+        display: none; } }
+
+/* CONTACT */
+.contact {
+  background: rgba(97, 134, 255, 0.8); }
+  .contact .section-header:before {
+    content: "K"; }
+  .contact .fa {
+    font-size: 50px;
+    width: 80px;
+    color: #fff;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: background 1s;
+    animation: shakeIconsOut 1s ease-in-out; }
+    .contact .fa:hover {
+      animation: shakeIconsIn 1s ease-in-out; }
+    .contact .fa.fa-github:hover {
+      background: #333; }
+    .contact .fa.fa-envelope:hover {
+      background: #d34836; }
+  .contact .form-group {
+    margin: 30px 0; }
+    .contact .form-group .form-control {
+      margin-bottom: 20px;
+      font-size: 20px;
+      border-radius: 8px;
+      resize: none; }
+    .contact .form-group .btn {
+      display: block;
+      margin: 0 auto 40px;
+      text-transform: uppercase; }
+
+/* FOOTER */
+footer {
+  background: #6186ff;
+  padding: 10px 0; }
+  footer p {
+    margin-bottom: 0;
+    font-size: 14px; }
+    footer p span {
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
