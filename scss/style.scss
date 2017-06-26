@@ -417,7 +417,7 @@ body {
 
 .skills {
     background: $hero-bg-color;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     .section-header {
         &:before {
             content: "U";
@@ -441,23 +441,18 @@ body {
             margin: 10px 15px;
         }
     }
-    .future-skills-icon {
-        height: 100px;
-        margin: 0;
-        padding: 0;
-    }
-    .test {
-        line-height: 100px;
-    }
-    .operators {
-        font-weight: 700;
-        margin-left: -3px;
-        font-size: 70px;
-        line-height: 100px;
-        position: relative;
-        top: 22px;
-        &.or {
-            margin: 0 5px;
+    .future-skills {
+        .future-skills-icon {
+            height: 80px;
+        }
+        .operators {
+            font-weight: 700;
+            font-size: 60px;
+            margin-left: -6px;
+            line-height: 100px;
+            position: relative;
+            top: 18px;
+            left: 3px;
         }
     }
 }
