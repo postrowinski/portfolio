@@ -172,24 +172,23 @@
         position: relative;
     }
     .about {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        @extend %margin-auto;
         text-align: center;
+        @include middle-center-align;
+        
         h1 {
             @media #{$vertical-phone} {
                 font-size: 28px;
+            }
+            @media (max-height: 700px) and #{$phone} {
+                font-size: 25px;
             }
         }
         h2 {
             @media #{$vertical-phone} {
                 font-size: 22px;
+            }
+            @media (max-height: 700px) and #{$phone} {
+                font-size: 19px;
             }
         }
         img {
@@ -197,10 +196,17 @@
             border-radius: 50%;
             border: 3px dashed $main-font-color;
             @include filter-gray(100%);
+            @media (max-height: 700px) and #{$phone} {
+                width: 150px;
+            }
         }
         .goal {
             max-width: 50%;
             @extend %margin-auto;
+            @media (max-height: 700px) and #{$phone} {
+                max-width: 90%;
+                font-size: 22px;
+            }
         }
     }
 }
