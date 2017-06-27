@@ -1,7 +1,7 @@
 $(document).ready(function () {
     'use strict';
     
-    //Defane function animation for navigation links
+    //Define function animation for navigation links
     function scrollTopAnimation(top) {
         $('body').animate({
             scrollTop: top

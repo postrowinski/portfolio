@@ -1,0 +1,38 @@
+/* GENERAL */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.section-header {
+    text-align: center;
+    color: $main-font-color;
+    font-family: 'Roboto', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    margin: 80px 0;
+    text-shadow: 1px 1px 1px $sec-font-color;
+    &:before {
+        content: "";
+        @include middle-center-align;
+        font-size: 162px;
+        opacity: 0.3;
+        text-shadow: none;
+        @media #{$vertical-phone} {
+            font-size: 124px;
+        }
+    }
+    @media #{$vertical-phone} {
+         font-size: 32px;
+         margin: 50px 0;
+    }
+}
+
+a {
+    &:hover {
+        color: transparent;
+    }
+}
