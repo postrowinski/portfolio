@@ -1,5 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700|Roboto&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin-ext');
 
 /* IMPORT FILES */
 @import 'variables.scss';
@@ -176,6 +177,8 @@
         @include middle-center-align;
         
         h1 {
+            font-family: 'Didact Gothic', sans-serif;
+            font-weight: 700;
             @media #{$vertical-phone} {
                 font-size: 28px;
             }
@@ -194,7 +197,8 @@
         img {
             margin: 15px 0;
             border-radius: 50%;
-            border: 3px dashed $main-font-color;
+            border: 2px dashed $main-font-color;
+            width: 200px;
             @include filter-gray(100%);
             @media (max-height: 700px) and #{$phone} {
                 width: 150px;
@@ -454,9 +458,15 @@ footer {
     padding: 10px 0;
     p {
         margin-bottom: 0;
+        line-height: 20px;
         font-size: 14px;
-        span {
-            color: $main-font-color;
+    }
+    .footer-link {
+        color: $main-font-color;
+        text-decoration: none;
+        @include transition(font-size 0.4s);
+        &:hover {
+            font-size: 17px;    
         }
     }
 }

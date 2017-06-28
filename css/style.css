@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700|Roboto&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin-ext");
 /* IMPORT FILES */
 /* VARIABLES */
 /* MEDIA QUERY*/
@@ -260,12 +261,15 @@ a:hover {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    @media (max-width: 475px) {
-      .hero .about h1 {
-        font-size: 28px; } }
-    @media (max-height: 700px) and (max-width: 768px) {
-      .hero .about h1 {
-        font-size: 25px; } }
+    .hero .about h1 {
+      font-family: 'Didact Gothic', sans-serif;
+      font-weight: 700; }
+      @media (max-width: 475px) {
+        .hero .about h1 {
+          font-size: 28px; } }
+      @media (max-height: 700px) and (max-width: 768px) {
+        .hero .about h1 {
+          font-size: 25px; } }
     @media (max-width: 475px) {
       .hero .about h2 {
         font-size: 22px; } }
@@ -275,7 +279,8 @@ a:hover {
     .hero .about img {
       margin: 15px 0;
       border-radius: 50%;
-      border: 3px dashed #fff;
+      border: 2px dashed #fff;
+      width: 200px;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
       @media (max-height: 700px) and (max-width: 768px) {
@@ -471,8 +476,14 @@ footer {
   padding: 10px 0; }
   footer p {
     margin-bottom: 0;
+    line-height: 20px;
     font-size: 14px; }
-    footer p span {
-      color: #fff; }
+  footer .footer-link {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: font-size 0.4s;
+    transition: font-size 0.4s; }
+    footer .footer-link:hover {
+      font-size: 17px; }
 
 /*# sourceMappingURL=style.css.map */
