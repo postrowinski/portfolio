@@ -3,7 +3,7 @@ $(document).ready(function () {
     
     //Define function animation for navigation links
     function scrollTopAnimation(top) {
-        $('body').animate({
+        $('html, body').animate({
             scrollTop: top
         }, 500);
     }
