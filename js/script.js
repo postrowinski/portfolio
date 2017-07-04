@@ -29,4 +29,11 @@ $(document).ready(function () {
         $('#overlay').removeClass('open');
         $('#toggle').removeClass('active');
     });
+    
+    //Disabled buttons (links to github) when cursor is not on project image
+    $('.layer').hover(function () {
+        $('.info').find('.btn').removeAttr('disabled');
+    }, function () {
+        $('.info').find('.btn').attr('disabled', 'disabled');
+    });
 });

@@ -40,6 +40,7 @@ module.exports = function(grunt) {
                     src : [
                         'css/*.css',
                         '*.html',
+                        '*.js',
                         'js/*.js'
                     ]
                 },
@@ -62,4 +63,3 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
   grunt.registerTask('img', ['imagemin']);
 };
-
