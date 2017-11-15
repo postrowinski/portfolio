@@ -240,6 +240,26 @@
     .info-container {
         position: relative;
     }
+    .header-game {
+        position: absolute;
+        top: -35px;
+        left: -40px;
+        z-index: 2;
+        font-weight: 700;
+        font-size: 50px;
+        transform: rotate(-45deg);
+        text-shadow: 1px 1px 1px #000;
+        @media #{$phone} {
+            font-size: 30px;
+            left: -20px;
+        }
+        @media #{$vertical-phone} {
+            font-size: 22px;
+            left: 0;
+            top: 0;
+        }
+    }
+
     .layer {
         top: 0;
         left: 0; 
